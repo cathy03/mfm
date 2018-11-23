@@ -16,6 +16,7 @@
   font-size: 17px;
 }
 .title-info .release{
+  font-family: 'Roboto', sans-serif;
   font-size: 17px;
   padding-bottom: 40px;  
 }
@@ -33,6 +34,7 @@
 }
 
 .contents-info .people{
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 15px;
   padding-bottom: 40px;
