@@ -13,7 +13,7 @@ for (i = 0; i < windowWidth/2; i++) {
 
 for (i = 0; i < windowWidth/2; i++) { 
   anime({
-    targets: 'li:nth-child('+i+') .child img',
+    targets: 'li:nth-child('+i+') .child',
     translateY:[
         function(){ return anime.random(-5, 5) +'vh';}, 
         function(){ return anime.random(-75, 75) +'vh';} 
@@ -27,7 +27,7 @@ for (i = 0; i < windowWidth/2; i++) {
 
 $('.wrapper').click(function(){
   anime({
-    targets: 'li .child img',
+    targets: 'li .child',
     translateY: 0,
     duration: 1000,
     direction: 'alternate',
@@ -37,7 +37,7 @@ $('.wrapper').click(function(){
   setTimeout(function(){
     for (i = 0; i < windowWidth/2; i++){ 
       anime({
-        targets: 'li:nth-child('+i+') .child img',
+        targets: 'li:nth-child('+i+') .child',
         translateY:[
             0, 
             function(){ return anime.random(-75, 75) +'vh';} 
