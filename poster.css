@@ -1,0 +1,28 @@
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.wrapper{
+  overflow: hidden;
+  background-color: #292E36;
+  height: 75vh;
+}
+
+.parent{
+  width: 2px;
+  height: 75vh;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+
+.child{
+  position: absolute;
+  top: 25%;
+}
+
+img{
+  width:100vw;
+  height: auto;
+}

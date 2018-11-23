@@ -1,0 +1,55 @@
+.contents{
+  color: #fff;
+  z-index: 10;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  padding: 50px 55px 55px 65px;
+  background-color: #292E36;
+  box-sizing: border-box;
+}
+
+.title-info .review{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 17px;
+}
+.title-info .release{
+  font-size: 17px;
+  padding-bottom: 40px;  
+}
+
+.title-info h2{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 28px;
+  padding-bottom: 30px;
+}
+
+.contents-info{
+  overflow: hidden;
+}
+
+.contents-info .people{
+  font-weight: 500;
+  font-size: 15px;
+  padding-bottom: 40px;
+  width: 200px;
+  float: left;
+}
+
+.contents-info .logo{
+  float: right; 
+}
+
+.contents-info .logo img{
+  width: 35px;
+  height: 35px;
+}
+
+article{
+  font-size: 13px;
+  line-height: 24px;
+}
