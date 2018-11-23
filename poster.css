@@ -18,13 +18,11 @@ body {
 }
 
 .child{
-  width:100vw;
-  height: auto;
   position: absolute;
   top: 25%;
 }
 
 img{
-  max-width: 100%;
-  width:auto;
+  width:100vw;
+
 }
