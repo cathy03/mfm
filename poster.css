@@ -18,11 +18,12 @@ body {
 }
 
 .child{
+  width:100vw;
+  height: auto;
   position: absolute;
   top: 25%;
 }
 
 img{
-  width:100vw;
-  height: auto;
+  width:100%;
 }
