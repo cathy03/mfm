@@ -6,12 +6,12 @@ body {
 
 .wrapper{
   overflow: hidden;
-  height: 75vh;
+  height: 80vh;
 }
 
 .parent{
   width: 2px;
-  height: 75vh;
+  height: 80vh;
   float: left;
   overflow: hidden;
   position: relative;
