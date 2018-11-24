@@ -1,6 +1,6 @@
 var windowWidth = $(window).width();  
 var listCount = 0;
-var addedList = '<li class="parent"><div class="child"><img src="images/no.svg"></div></li>'
+var addedList = '<li class="parent"><div class="child"><img src="images/no.png"></div></li>'
 
 anime.easings['myCustomEasingName'] = function(t){
   return Math.pow(Math.sin(t*3),3);
