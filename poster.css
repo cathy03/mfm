@@ -7,6 +7,10 @@ body {
 .wrapper{
   overflow: hidden;
   height: 80vh;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
 }
 
 .parent{
