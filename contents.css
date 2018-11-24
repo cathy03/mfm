@@ -8,22 +8,20 @@
   padding: 50px 55px 55px 65px;
   background-color: #292E36;
   box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,Lato,Roboto,Segoe UI,Helvetica Neue,Helvetica,Verdana,Arial,sans-serif;
 }
 
 .title-info .review{
-  font-family: 'Roboto', sans-serif;
   font-weight: 900;
   font-size: 17px;
 }
 .title-info .release{
-  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 17px;
   padding-bottom: 40px;  
 }
 
 .title-info h2{
-  font-family: 'Roboto', sans-serif;
   font-weight: 900;
   font-size: 28px;
   line-height: 28px;
@@ -35,7 +33,6 @@
 }
 
 .contents-info .people{
-  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 15px;
   padding-bottom: 40px;
