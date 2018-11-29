@@ -7,22 +7,25 @@
           transform-style: preserve-3d;
   margin-top: 80vh;
   padding: 50px 55px 55px 65px;
-  background-color: #292E36;
+  background-color: #191C21;
   box-sizing: border-box;
   font-family: -apple-system,BlinkMacSystemFont,Lato,Roboto,Segoe UI,Helvetica Neue,Helvetica,Verdana,Arial,sans-serif;
 }
 
-.title-info .review{
+.title-info {
+  padding-bottom: 45px;  
+}
+
+.title-info .genres{
   font-weight: 900;
-  font-size: 17px;
+  font-size: 14px;
 }
 .title-info .release{
   font-weight: 400;
   font-size: 17px;
-  padding-bottom: 40px;  
 }
 
-.title-info h2{
+.title {
   font-weight: 900;
   font-size: 28px;
   line-height: 28px;
@@ -31,12 +34,12 @@
 
 .contents-info{
   overflow: hidden;
+  padding-bottom: 40px;
 }
 
 .contents-info .people{
   font-weight: 400;
   font-size: 15px;
-  padding-bottom: 40px;
   width: 200px;
   float: left;
 }
@@ -53,4 +56,11 @@
 article{
   font-size: 13px;
   line-height: 24px;
+}
+
+@media screen and (min-width: 600px) {
+  .contents{
+    width:600px;
+    margin-left: 10vw;
+  }
 }

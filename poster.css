@@ -30,3 +30,15 @@ img{
   width:100vw;
 
 }
+
+@media screen and (min-width: 600px) {
+  .wrapper{
+    height: 100vh;
+  }
+  .parent{
+    height: 100vh;
+  }
+  .child{
+    top: 10%;
+  }
+}
