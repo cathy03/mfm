@@ -46,11 +46,11 @@
   float: left;
 }
 
-.contents-info .logo{
+.contents-info .review{
   float: right; 
 }
 
-.contents-info .logo img{
+.contents-info .review img{
   width: 35px;
   height: 35px;
 }
@@ -58,6 +58,12 @@
 article{
   font-size: 13px;
   line-height: 24px;
+  opacity: .6;
+}
+
+.footer{
+  font-size: 11px;
+  padding: 20px 0;
   opacity: .6;
 }
 
