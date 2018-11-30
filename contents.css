@@ -8,10 +8,10 @@
   margin-top: 80vh;
   padding: 50px 55px 55px 65px;
   background-color: #191C21;
-  box-sizing: border-box;
   position: relative;
   font-family: -apple-system,BlinkMacSystemFont,Lato,Roboto,Segoe UI,Helvetica Neue,Helvetica,Verdana,Arial,sans-serif;
 }
+
 
 .title-info {
   padding-bottom: 45px;  
@@ -69,13 +69,13 @@ article{
 }
 
 .back-button{
-  position: fixed;
+  position: absolute;
   top: 50px;
   left: 27px;
 }
 .back-button img{
   width: 12px;
-  margin-top:-5px;
+  margin-top:-4px;
 }
 
 @media screen and (min-width: 600px) {
