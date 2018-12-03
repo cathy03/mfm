@@ -40,13 +40,21 @@
   padding-bottom: 40px;
 }
 
-.contents-info .people{
-  font-weight: 400;
-  font-size: 15px;
+.contents-info .people {
   width: 200px;
   float: left;
 }
 
+.contents-info .people-title{
+  font-weight: 900;
+  font-size: 11px;
+  padding-bottom: 2px;
+}
+
+.contents-info .people-name {
+  font-weight: 400;
+  font-size: 13px;
+}
 .contents-info .review{
   float: right; 
 }
@@ -75,7 +83,7 @@ article{
 }
 .back-button img{
   width: 13px;
-  margin-top:-2px;
+  margin-top:-4px;
 }
 
 @media screen and (min-width: 600px) {
