@@ -27,7 +27,7 @@ body {
 .poster{
   overflow: hidden;
   width: 74vw;
-  height: 70vh;
+  height: 433px;
   background-color: #2C2F36;
   box-shadow: 0 20px 70px 0 rgba(0,0,0,0.50);
 }

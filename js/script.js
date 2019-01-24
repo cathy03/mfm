@@ -16,8 +16,8 @@ for (i = 0; i < posterWidth; i++) {
   anime({
     targets: 'li:nth-child('+i+') .child img',
     translateY:[
-        function(){ return anime.random(-5, 5) +'vh';}, 
-        function(){ return anime.random(-70, 70) +'vh';} 
+        function(){ return anime.random(-5, 5) +'px';}, 
+        function(){ return anime.random(-450, 450) +'px';} 
     ],
     duration: function(){ return anime.random(1000, 5000)},
     loop: true,
@@ -41,7 +41,7 @@ $('.wrapper').click(function(){
         targets: 'li:nth-child('+i+') .child img',
         translateY:[
             0, 
-            function(){ return anime.random(-85, 85) +'vh';} 
+            function(){ return anime.random(-450, 450) +'px';} 
         ],
         duration: function(){ return anime.random(1000, 5000)},
         loop: true,

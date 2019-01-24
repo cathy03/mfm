@@ -1,12 +1,12 @@
 .wrapper{
   overflow: hidden;
-  height: 70vh;
+  height: 433px;
   background-color: #2C2F36;
 }
 
 .parent{
   width: 1px;
-  height: 70vh;
+  height: 433px;
   float: left;
   overflow: hidden;
   position: relative;
