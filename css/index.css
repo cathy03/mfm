@@ -1,27 +1,26 @@
 body {
-  font-family: 'Roboto','sans-serif';
+  font-family: 'Montserrat', sans-serif;
   background-color: #323D6B;
 }
 
 .main-container{
- position: absolute;
-    
-    overflow: hidden;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .swiper-container {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
 }
 
 .swiper-wrapper {
   display: flex;
+  align-items: center;
 }
 
 .swiper-slide{
@@ -33,13 +32,15 @@ body {
   overflow: hidden;
   width: 74vw;
   height: 433px;
+  border-radius: 6px;
   background-color: #2C2F36;
   box-shadow: 0 20px 70px 0 rgba(0,0,0,0.50);
 }
+
 .title-section{
   width: 74vw;
   position: absolute;
-  bottom: 36px;
+  bottom: 34px;
   left: 6.5vw;
   z-index: 1000;
 }
@@ -72,7 +73,7 @@ body {
 }
 
 .people{
-  margin-top: 16px;
+  margin: 16px 0;
 }
 
 .secondary-text{
@@ -83,13 +84,66 @@ body {
   text-transform: uppercase;
   letter-spacing: .5px;
 }
+.dot-section{
+  overflow: hidden;
+  position: absolute;
+  top:36px;
+  right: -18px;
+  z-index: 1000;
+}
 
 .button-about{
   width: 36px;
   height: 36px;
-  position: absolute;
-  top:36px;
-  right: 6.5vw;
-  z-index: 1000;
+  display: block;
   text-align: center;
+  float: left;
+}
+
+.deco-circle{
+  margin-left: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  box-sizing: border-box;  
+  float: right;
+}
+
+.button-detail{
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.deco-circle-fill {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background-color: #fff;
+  position: absolute;
+  bottom: -18px;
+  left: 6.5vw;
+}
+
+@media screen and (min-width: 600px) {
+  .poster{
+    height: 700px;
+  }
+  .title-section{
+    bottom: 60px;
+  }
+  .title{
+    font-size: 72px;
+    line-height: 70px;
+  }
+
+  .secondary-text{
+    font-size: 20px;
+    line-height: 26px;
+  }
 }
