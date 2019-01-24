@@ -34,7 +34,7 @@ body {
 .title-section{
   width: 74vw;
   position: absolute;
-  bottom: 7.5vh;
+  bottom: 36px;
   left: 6.5vw;
   z-index: 1000;
 }
@@ -61,7 +61,7 @@ body {
 .movie-info{
   width: 74vw;
   position: absolute;
-  top:7.5vh;
+  top:36px;
   left: 6.5vw;
   z-index: 1000;
 }
@@ -83,7 +83,7 @@ body {
   width: 36px;
   height: 36px;
   position: absolute;
-  top:7.5vh;
+  top:36px;
   right: 6.5vw;
   z-index: 1000;
   text-align: center;
