@@ -1,0 +1,26 @@
+.wrapper{
+  overflow: hidden;
+  height: 70vh;
+  background-color: #2C2F36;
+}
+
+.parent{
+  width: 1px;
+  height: 70vh;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+
+.child{
+  position: absolute;
+  top: 30%;
+}
+
+.child img{
+  width: 74vw;
+  height: auto;
+}
+
+@media screen and (min-width: 600px) {
+}

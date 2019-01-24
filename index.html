@@ -4,40 +4,52 @@
     <title>MFM</title>
     <meta charset="utf-8">
     <meta name="Viewport" content="width=device-width">
-    <meta name="theme-color" content="#ffffff">
+    <meta name="theme-color" content="#292E36">
     <meta name="author" content="Yuhjoon Yoon"/>
     <meta name="copyright" content="Yuhjoon Yoon"/>
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/poster01.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700" rel="stylesheet">
   </head>
   <body>
-    <div class = "wrapper">
-      <div class="contents">
-        <h2 class="title">My<br>Favorite<br><strong>Movie</strong></h2>
-        <div class="about"><a href="">About</a></div>
-        <article class="mfm-info">내가 좋아하는 영화 포스터 디자인하고<br>간단하게 리뷰하기는 개뿔</article>
+    <div class="main-container">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><div class="poster"><ol class="wrapper"></ol></div></div>
+          <div class="swiper-slide"><div class="poster">Slide</div></div>
+          <div class="swiper-slide"><div class="poster">Slide</div></div>
+        </div>
       </div>
-      <div class="swipe-container">
-        <ul class="list">
-          <li class="list-item"><a href="mfm.html">
-            <div class="title-info">
-              <p class="genres">Action, Sci-Fi</p>
-              <p class="release">2011</p>
-            </div>
-            <div class="review"><img src="images/logo.svg"></div>
-          </a>
-          </li>
-        </ul>
+      <a class="button-about"><img src="images/logo.svg"></a>
+      <div class="movie-info secondary-text">
+        <div class="movie-info-genre">Action, Sci-Fi</div>
+        <div class="movie-info-release">2011</div>
       </div>
+      <div class="title-section">
+        <h2 class="title"><span>RISE OF</span><span>THE PLANET OF</span><span>THE APES</span></h2>
+        <div class="people secondary-text">
+          <span>Rupert Wyatt</span><br><span>Andy Serkis</span>
+        </div>
+      </div>
+      
     </div>
-  </div>
-  <script src="jquery-3.3.1.min.js"></script>
-  <script src="TweenMax.min.js"></script>
-  <script src="script-index.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/anime.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/script.js"></script>
+   <script>
+    var swiper = new Swiper('.swiper-container', {
+      direction: 'vertical',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
   </body>
 </html>
