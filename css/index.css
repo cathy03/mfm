@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat', 'sans-serif';
+  font-family: 'Roboto', 'sans-serif';
   background-color: #323D6B;
 }
 
@@ -40,7 +40,7 @@ body {
 .title-section{
   width: 74vw;
   position: absolute;
-  bottom: 34px;
+  bottom: -18px;
   left: 6.5vw;
   z-index: 1000;
 }
@@ -101,7 +101,7 @@ body {
 }
 
 .deco-circle{
-  margin-left: 14px;
+  margin-left: 10px;
   width: 36px;
   height: 36px;
   border-radius: 100%;
@@ -125,9 +125,7 @@ body {
   height: 36px;
   border-radius: 100%;
   background-color: #fff;
-  position: absolute;
-  bottom: -18px;
-  left: 6.5vw;
+  margin-top: 10px;
 }
 
 @media screen and (min-width: 600px) {
