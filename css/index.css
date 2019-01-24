@@ -73,7 +73,8 @@ body {
 }
 
 .people{
-  margin: 16px 0;
+  margin-top: 8px;
+  margin-bottom: 12px;
 }
 
 .secondary-text{
