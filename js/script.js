@@ -48,7 +48,7 @@ $('.wrapper').click(function(){
 
 
 lottie.loadAnimation({
-  container: $('.secondMovie.poster'),
+  container: $('.secondMovie .poster'),
   path: 'data.json', // Required
   renderer: 'svg', // Required
   loop: true, // Optional
