@@ -20,7 +20,7 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide firstMovie"><div class="poster"><ol class="wrapper"></ol></div></div>
-          <div class="swiper-slide secondMovie"><div class="poster lottie" data-animation-path="animation/">Slide</div></div>
+          <div class="swiper-slide secondMovie"><div class="poster">Slide</div></div>
           <div class="swiper-slide"><div class="poster">Slide</div></div>
         </div>
       </div>
@@ -49,7 +49,7 @@
   <script src="js/script.js"></script>
   <script>
     lottie.loadAnimation({
-      container: $('.secondMovie .poster'),
+      container: '.secondMovie .poster',
       renderer: 'svg',
       loop: true,
       autoplay: true,
