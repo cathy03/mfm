@@ -45,12 +45,3 @@ $('.wrapper').click(function(){
     }
   },700);
 });
-
-
-lottie.loadAnimation({
-  container: $('.secondMovie .poster'),
-  path: 'data.json', // Required
-  renderer: 'svg', // Required
-  loop: true, // Optional
-  autoplay: true, // Optional
-})

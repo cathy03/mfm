@@ -47,7 +47,15 @@
   <script src="js/lottie.min.js"></script>
 
   <script src="js/script.js"></script>
-
+  <script>
+    lottie.loadAnimation({
+      container: $('.secondMovie .poster'),
+      path: 'data.json', // Required
+      renderer: 'svg', // Required
+      loop: true, // Optional
+      autoplay: true, // Optional
+    });
+  </script>
   <script>  
     var swiper = new Swiper('.swiper-container', {
       pagination:'.swiper-pagination',
