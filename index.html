@@ -19,8 +19,8 @@
     <div class="main-container">
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide"><div class="poster"><ol class="wrapper"></ol></div></div>
-          <div class="swiper-slide"><div class="poster">Slide</div></div>
+          <div class="swiper-slide firstMovie"><div class="poster"><ol class="wrapper"></ol></div></div>
+          <div class="swiper-slide secondMovie"><div class="poster">Slide</div></div>
           <div class="swiper-slide"><div class="poster">Slide</div></div>
         </div>
       </div>
@@ -44,16 +44,25 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/anime.min.js"></script>
   <script src="js/swiper.min.js"></script>
+  <script src="js/lottie.js"></script>
+
   <script src="js/script.js"></script>
-  <script>
-    
+
+  <script>  
     var swiper = new Swiper('.swiper-container', {
-      /*direction: 'vertical',*/
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
+      pagination:'.swiper-pagination',
+      paginationClickable: true,
+      speed: 600,
+      grabCursor: true,
+      onTransitionStart(swiper) {
+        if ($(".swiper-slide-active").hasClass("firstMovie")) {
+          $("body").css("background-color", "#323D6B");
+        } else {
+          $("body").css("background-color", "#6D889F");
+
+        }
+      }
+    });    
   </script>
   </body>
 </html>
