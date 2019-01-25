@@ -47,7 +47,7 @@ $('.wrapper').click(function(){
 });
 
 
-var animation = bodymovin.loadAnimation({
+lottie.loadAnimation({
   container: $('.secondMovie.poster'),
   path: 'data.json', // Required
   renderer: 'svg', // Required
