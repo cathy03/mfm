@@ -20,7 +20,7 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide firstMovie"><div class="poster"><ol class="wrapper"></ol></div></div>
-          <div class="swiper-slide secondMovie"><div class="poster">Slide</div></div>
+          <div class="swiper-slide secondMovie"><div id="dd"class="poster"></div></div>
           <div class="swiper-slide"><div class="poster">Slide</div></div>
         </div>
       </div>
@@ -44,17 +44,19 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/anime.min.js"></script>
   <script src="js/swiper.min.js"></script>
-  <script src="js/lottie.min.js"></script>
+  <script src="js/lottie.js" type="text/javascript"></script>
+
 
   <script src="js/script.js"></script>
   <script>
     lottie.loadAnimation({
-      container: '.secondMovie .poster',
+      container: document.getElementById('dd'),
       renderer: 'svg',
       loop: true,
       autoplay: true,
-    
+      path: 'data.json' // the path to the animation json
     });
+    
   </script>
   <script>  
     var swiper = new Swiper('.swiper-container', {
