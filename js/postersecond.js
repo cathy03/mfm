@@ -1,5 +1,5 @@
 const posterSecond = lottie.loadAnimation({
-      container: $("#item2 .poster"),
+      container: document.getElementById('poster-second'),
       renderer: 'svg',
       loop: true,
       autoplay: false,
