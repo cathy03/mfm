@@ -43,8 +43,7 @@
   <script src="js/anime.min.js"></script>
   <script src="js/flicking.pkgd.min.js"></script>
   <script src="js/lottie.js" type="text/javascript"></script>
-  <script src="js/posterfirst.js"></script>
-  <script src="js/postersecond.js"></script>
+  <script class="poster-js" src="js/posterfirst.js"></script>
 
   <script>
     posterFirst();
@@ -79,20 +78,29 @@
       "#503D30"
     ]
 
+    var posterJs = [
+      "js/posterfirst.js",
+      "js/posetersecond.js",
+      ""
+    ]
+
     function countIndex(e) { 
       countIndexNumber = e.no;
-      if(countIndexNumber == 0){
+
+      $('.poster-js').attr("src",posterJs[countIndexNumber]);
+      $('.movie-info-genre').text(movieInfoGenreItem[countIndexNumber]);
+      $('.movie-info-release').text(movieInfoRelease[countIndexNumber]);
+      $('.title').html(movieTitle[countIndexNumber]);
+      $('.people').html(moviePeople[countIndexNumber]);
+      $("body").css("background-color", bgColor[countIndexNumber]);
+
+       if(countIndexNumber == 0){
       }
       if(countIndexNumber == 1){
         posterSecond.play();
       } else{        
         posterSecond.stop();
       }
-      $('.movie-info-genre').text(movieInfoGenreItem[countIndexNumber]);
-      $('.movie-info-release').text(movieInfoRelease[countIndexNumber]);
-      $('.title').html(movieTitle[countIndexNumber]);
-      $('.people').html(moviePeople[countIndexNumber]);
-      $("body").css("background-color", bgColor[countIndexNumber]);
     }
 
     new eg.Flicking("#swiper-container", {
