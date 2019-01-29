@@ -4,7 +4,7 @@
     <title>MFM</title>
     <meta charset="utf-8">
     <meta name="Viewport" content="width=device-width">
-    <meta name="theme-color" content="#323D6B">
+    <!--<meta name="theme-color" content="#323D6B">-->
     <meta name="author" content="Yuhjoon Yoon"/>
     <meta name="copyright" content="Yuhjoon Yoon"/>
 
@@ -17,12 +17,10 @@
   </head>
   <body>
     <div class="main-container">
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide firstMovie"><div class="poster"><ol class="wrapper"></ol></div></div>
-          <div class="swiper-slide secondMovie"><div id="dd"class="poster"></div></div>
-          <div class="swiper-slide"><div class="poster">Slide</div></div>
-        </div>
+      <div id="swiper-container">
+        <div id="item1" class="swiper-slide"><div class="poster-container"><div class="poster"><ol class="wrapper"></ol></div></div></div>
+        <div id="item2" class="swiper-slide"><div class="poster-container"><div id="dd"class="poster"></div></div></div>
+        <div id="item3" class="swiper-slide"><div class="poster-container"><div class="poster">Slide</div></div></div>
       </div>
       <div class="dot-section">
         <a class="button-about"><img src="images/logo.svg"></a>
@@ -33,7 +31,7 @@
         <div class="movie-info-release">2011</div>
       </div>
       <div class="title-section">
-        <h2 class="title"><span>RISE OF</span><br><span>THE PLANET OF</span><br><span>THE APES</span></h2>
+        <h2 id="log" class="title"><span>RISE OF</span><br><span>THE PLANET OF</span><br><span>THE APES</span></h2>
         <div class="people secondary-text">
           <span>Rupert Wyatt</span><br><span>Andy Serkis</span>
         </div>
@@ -43,36 +41,40 @@
     </div>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/anime.min.js"></script>
-  <script src="js/swiper.min.js"></script>
+  <script src="js/flicking.pkgd.min.js"></script>
   <script src="js/lottie.js" type="text/javascript"></script>
-
-
-  <script src="js/script.js"></script>
+  <script src="js/posterfirst.js"></script>
   <script>
-    lottie.loadAnimation({
+    const posterSecond = lottie.loadAnimation({
       container: document.getElementById('dd'),
       renderer: 'svg',
       loop: true,
-      autoplay: true,
-      path: 'data.json' // the path to the animation json
+      autoplay: false,
+      path: 'data.json'
     });
     
   </script>
-  <script>  
-    var swiper = new Swiper('.swiper-container', {
-      pagination:'.swiper-pagination',
-      paginationClickable: true,
-      speed: 600,
-      grabCursor: true,
-      onTransitionStart(swiper) {
-        if ($(".swiper-slide-active").hasClass("firstMovie")) {
-          $("body").css("background-color", "#323D6B");
-        } else {
-          $("body").css("background-color", "#6D889F");
+  <script>
+    posterFirst();
+    var elLog2 = $('#log');
+    function countIndex(e) { 
+      countIndexNumber = e.no;
+      if(countIndexNumber == 0){
+        posterSecond.stop();
+    }
+      if(countIndexNumber == 1){
+        posterSecond.play();
+    }
+  }
 
-        }
-      }
-    });    
+    new eg.Flicking("#swiper-container", {
+      duration: 300,
+      circular: true,
+      defaultIndex: 0      
+    }).on({
+      flickEnd : countIndex
+    });
+    
   </script>
   </body>
 </html>
