@@ -31,7 +31,7 @@
         <div class="movie-info-release">2011</div>
       </div>
       <div class="title-section">
-        <h2 id="log" class="title"><span>RISE OF</span><br><span>THE PLANET OF</span><br><span>THE APES</span></h2>
+        <h2 class="title"><span>RISE OF</span><br><span>THE PLANET OF</span><br><span>THE APES</span></h2>
         <div class="people secondary-text">
           <span>Rupert Wyatt</span><br><span>Andy Serkis</span>
         </div>
@@ -49,18 +49,50 @@
   <script>
     posterFirst();
 
-    var elLog2 = $('#log');
+    var movieInfoGenreItem = [
+      "Action, Sci-Fi",
+      "Drama, Thriller",
+      "Drama, Thriller"
+    ]
+
+    var movieInfoRelease = [
+      "2011",
+      "2018",
+      "2014"
+    ]
+
+    var movieTitle = [
+      "<span>RISE OF</span><br><span>THE PLANET OF</span><br><span>THE APES</span>",
+      "SEARCHING",
+      "WHIPLASH"
+    ]
+
+    var moviePeople = [
+      "<span>Rupert Wyatt</span><br><span>Andy Serkis</span>",
+      "<span>Aneesh CHAGANTY</span><br><span>editor</span>",
+      "<span>Damien Chazelle</span><br><span>Miles Teller</span><br><span>J.K. Simmons</span>"
+    ]
+
+    var bgColor = [
+      "#323D6B",
+      "#6D889F",
+      "#503D30"
+    ]
+
     function countIndex(e) { 
       countIndexNumber = e.no;
       if(countIndexNumber == 0){
-        $("body").css("background-color", "#323D6B");
       }
       if(countIndexNumber == 1){
-        $("body").css("background-color", "#6D889F");
         posterSecond.play();
       } else{        
         posterSecond.stop();
       }
+      $('.movie-info-genre').text(movieInfoGenreItem[countIndexNumber]);
+      $('.movie-info-release').text(movieInfoRelease[countIndexNumber]);
+      $('.title').html(movieTitle[countIndexNumber]);
+      $('.people').html(moviePeople[countIndexNumber]);
+      $("body").css("background-color", bgColor[countIndexNumber]);
     }
 
     new eg.Flicking("#swiper-container", {
