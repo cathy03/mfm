@@ -13,8 +13,8 @@ body {
 }
 
 #swiper-container{
-  height: 100vh;
-
+  height: 100%;
+  width: 100%;
 }
 .swiper-slide{
   display: flex;
