@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', 'sans-serif';
-  background-color: #4A2F3A;
+  background-color: #433C3E;
 }
 
 .main-container{
@@ -14,6 +14,11 @@ body {
 
 #swiper-container{
   height: 100vh;
+
+}
+.swiper-slide{
+  display: flex;
+  align-items: center;
 }
 
 .poster-container{
@@ -22,9 +27,6 @@ body {
 }
 
 .poster{
-  position: absolute;
-  top:50%;
-  transform: translate3d(0, -50%, 0);
   overflow: hidden;
   width: 74vw;
   height: 123vw;
