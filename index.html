@@ -50,21 +50,21 @@
   <script>
 
     var movieInfoGenreItem = [
-      "Action, Sci-Fi",
-      "Drama, Thriller",
-      "Drama, Thriller"
+      "<span>Action, Sci-Fi</span>",
+      "<span>Drama, Thriller</span>",
+      "<span>Drama, Thriller</span>"
     ]
 
     var movieInfoRelease = [
-      "2011",
-      "2018",
-      "2014"
+      "<span>2011</span>",
+      "<span>2018</span>",
+      "<span>2014</span>"
     ]
 
     var movieTitle = [
       "<span>RISE OF</span><br><span>THE PLANET OF</span><br><span>THE APES</span>",
-      "SEARCHING",
-      "WHIPLASH"
+      "<span>SEARCHING</span>",
+      "<span>WHIPLASH</span>"
     ]
 
     var moviePeople = [
@@ -82,8 +82,8 @@
     function countIndex(e) { 
       countIndexNumber = e.no;
 
-      $('.movie-info-genre').text(movieInfoGenreItem[countIndexNumber]);
-      $('.movie-info-release').text(movieInfoRelease[countIndexNumber]);
+      $('.movie-info-genre').html(movieInfoGenreItem[countIndexNumber]);
+      $('.movie-info-release').html(movieInfoRelease[countIndexNumber]);
       $('.title').html(movieTitle[countIndexNumber]);
       $('.people').html(moviePeople[countIndexNumber]);
       $("body").css("background-color", bgColor[countIndexNumber]);

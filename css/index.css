@@ -1,6 +1,8 @@
 body {
   font-family: 'Roboto', 'sans-serif';
   background-color: #433C3E;
+  transition: background-color .5s ease-in-out;
+
 }
 
 .main-container{
@@ -54,6 +56,11 @@ body {
 .title span{
   float: left;
   text-transform: uppercase;
+  width: 100%;
+  transform: translateY(0);
+  animation-name: titleAnimation;
+  animation-timing-function:ease;
+  animation-duration: .5s;
 }
 
 .title:after { 
@@ -69,10 +76,41 @@ body {
   left: 6.5vw;
   z-index: 3000;
 }
+.movie-info-genre { 
+  clear:both; 
+  display:block; 
+}
+
+.movie-info-release{
+  clear:both; 
+  display:block; 
+}
+
+.movie-info span{
+  float: left;
+  transform: translateY(0);
+  animation-name: infoAnimation;
+  animation-timing-function: ease;
+  animation-duration: .5s;
+}
 
 .people{
   margin-top: 8px;
   margin-bottom: 12px;
+}
+
+.people:after { 
+  content:""; 
+  clear:both; 
+  display:block; 
+}
+
+.people span{
+  float: left;
+  transform: translateY(0);
+  animation-name: infoAnimation;
+  animation-timing-function: ease;
+  animation-duration: .5s;
 }
 
 .secondary-text{
@@ -142,5 +180,28 @@ body {
   .secondary-text{
     font-size: 20px;
     line-height: 26px;
+  }
+}
+
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;     
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;     
+  }
+}
+
+@keyframes infoAnimation {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;     
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+     
   }
 }
