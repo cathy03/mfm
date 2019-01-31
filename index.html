@@ -50,15 +50,15 @@
   <script>
 
     var movieInfoGenreItem = [
-      "<span>Action, Sci-Fi</span>",
-      "<span>Drama, Thriller</span>",
-      "<span>Drama, Thriller</span>"
+      "Action, Sci-Fi",
+      "Drama, Thriller",
+      "Drama, Thriller"
     ]
 
     var movieInfoRelease = [
-      "<span>2011</span>",
-      "<span>2018</span>",
-      "<span>2014</span>"
+      "2011",
+      "2018",
+      "2014"
     ]
 
     var movieTitle = [
@@ -82,8 +82,8 @@
     function countIndex(e) { 
       countIndexNumber = e.no;
 
-      $('.movie-info-genre').html(movieInfoGenreItem[countIndexNumber]);
-      $('.movie-info-release').html(movieInfoRelease[countIndexNumber]);
+      $('.movie-info-genre').text(movieInfoGenreItem[countIndexNumber]);
+      $('.movie-info-release').text(movieInfoRelease[countIndexNumber]);
       $('.title').html(movieTitle[countIndexNumber]);
       $('.people').html(moviePeople[countIndexNumber]);
       $("body").css("background-color", bgColor[countIndexNumber]);

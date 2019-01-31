@@ -76,23 +76,6 @@ body {
   left: 6.5vw;
   z-index: 3000;
 }
-.movie-info-genre { 
-  clear:both; 
-  display:block; 
-}
-
-.movie-info-release{
-  clear:both; 
-  display:block; 
-}
-
-.movie-info span{
-  float: left;
-  transform: translateY(0);
-  animation-name: infoAnimation;
-  animation-timing-function: ease;
-  animation-duration: .5s;
-}
 
 .people{
   margin-top: 8px;
@@ -190,15 +173,6 @@ body {
   }
   100% {
     transform: translateY(0);
-    opacity: 1;     
-  }
-}
-
-@keyframes infoAnimation {
-  0% {
-    opacity: 0;     
-  }
-  100% {
     opacity: 1;     
   }
 }
