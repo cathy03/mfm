@@ -2,21 +2,21 @@ var posterWidth = $(".poster").width();
 var listCount = 0;
 var addedList = '<li class="parent"><div class="child"><img class="keyword" src="images/no.png"></div></li>'
 
-for (i = 0; i < posterWidth; i++) { 
-  $( ".wrapper" ).append(addedList);
-  $(".child").eq(i).css('left',listCount--);
-}
-
 anime.easings['myCustomEasingName'] = function(t){
   return Math.pow(Math.sin(t*3),3);
-  }
+}
 
-function posterFirst(){
-  for (i = 0; i < posterWidth; i++) { 
+
+for (i = 0; i < posterWidth; i++) { 
+  $( ".wrapper" ).append(addedList);
+  $(".child").eq(i).css('left',listCount--);    
+}
+
+function posterFirst(i, yy,tt){
     anime({
       targets: 'li:nth-child('+i+') .child img',
-      translateY: function(){ return anime.random(-85, 85) +'vh';},
-      duration: function(){ return anime.random(1000, 5000)},
+      translateY: yy,
+      duration: tt,
       loop: true,
       elasticity: 5000,
       easing: 'myCustomEasingName',
@@ -36,8 +36,8 @@ function posterFirst(){
       for (i = 0; i < posterWidth; i++){ 
         anime({
           targets: 'li:nth-child('+i+') .child img',
-          translateY: function(){ return anime.random(-85, 85) +'vh';},
-          duration: function(){ return anime.random(1000, 5000)},
+          translateY: anime.random(-480, 480),
+          duration: anime.random(1000, 5000),
           loop: true,
           elasticity: 5000,
           easing: 'myCustomEasingName',
@@ -45,5 +45,5 @@ function posterFirst(){
       }
     },700);
   });
-}
+
 

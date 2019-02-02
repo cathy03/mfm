@@ -60,7 +60,7 @@ body {
   transform: translateY(0);
   animation-name: titleAnimation;
   animation-timing-function:ease;
-  animation-duration: .5s;
+  animation-duration: .4s;
 }
 
 .title:after { 
@@ -91,9 +91,9 @@ body {
 .people span{
   float: left;
   transform: translateY(0);
-  animation-name: titleAnimation;
-  animation-timing-function: ease-in-out;
-  animation-duration: .5s;
+  animation-name: infoAnimation;
+  animation-timing-function: ease;
+  animation-duration: .4s;
 }
 
 .secondary-text{
@@ -169,6 +169,17 @@ body {
 @keyframes titleAnimation {
   0% {
     transform: translateY(-50px);
+    opacity: 0;     
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;     
+  }
+}
+
+@keyframes infoAnimation {
+  0% {
+    transform: translateY(-30px);
     opacity: 0;     
   }
   100% {
