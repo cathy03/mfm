@@ -47,7 +47,6 @@
   <script src="js/posterfirst.js"></script>  
 
   <script>
-
     var movieInfoGenreItem = [
       "Action, Sci-Fi",
       "Drama, Thriller",
@@ -73,7 +72,7 @@
     ]
 
     var bgColor = [
-      "#EF8F79",
+      "#194130",
       "#89ACC4",
       "#6F84DB"
     ]
@@ -90,7 +89,7 @@
       $('.people').html(moviePeople[countIndexNumber]);
       $("body").css("background-color", bgColor[countIndexNumber]);
 
-       if(countIndexNumber == 0){
+      if(countIndexNumber == 0){
           for (i = 0; i < posterWidth; i++){        
             posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));
           }
