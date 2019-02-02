@@ -40,7 +40,7 @@ body {
 .title-section{
   width: 74vw;
   position: absolute;
-  bottom: 18px;
+  bottom: -22px;
   left: 6.5vw;
   z-index: 3000;
 }
@@ -140,7 +140,13 @@ body {
   text-align: center;
 }
 
-
+.deco-circle-fill {
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background-color: #fff;
+  margin-top: 10px;
+}
 
 @media screen and (min-width: 600px) {
   .poster{
