@@ -22,10 +22,16 @@
         <div id="item2" class="swiper-slide"><div class="poster-container"><div id="poster-second" class="poster"></div></div></div>
         <div id="item3" class="swiper-slide"><div class="poster-container"><div class="poster">Slide</div></div></div>
       </div>
-      <div class="dot-section">
-        <a class="button-about"><img src="images/logo.svg"></a>
-        <div class="deco-circle"></div>
+      <div class="about-section">
+        <div class="button-about-click"></div>
+        <div class="button-about"><div class="button-about-icon"><img src="images/logo.svg"></div></div>
+        <div class="about-contents">
+          <div class="about-contents-closed"></div>
+          <h3 class="about-contents-title"></h3>
+          <div class="about-contents-desc"></div>
+        </div>
       </div>
+      <div class="deco-circle"></div>
       <div class="movie-info secondary-text">
         <div class="movie-info-genre">Action, Sci-Fi</div>
         <div class="movie-info-release">2011</div>
@@ -47,6 +53,27 @@
   <script src="js/posterfirst.js"></script>  
 
   <script>
+    function openAbout() {
+      $('.about-section').addClass('active');
+      $('.button-about').addClass('active');
+      $('.button-about-icon').addClass('active');
+      $('.about-contents-closed').addClass('active');
+      $('.about-contents-title').html("MY<br>FAVORITE<br>FILMS");
+      $('.about-contents-closed').html('<img src="images/closed.svg">');
+      $('.about-contents-desc').html("This project started on facebook as a group called 'Listeners Playlist' where my friends shared their favorite music with one another. This inspired me to create an independant website where an archive with all the music that is shared in the group. Hence you are seeing now.<br><br>If you are a musician or have a nice music taste. And if you want to share the music via this website. Contact me. But all requests would not be allowed for the quality of contents.<br><br>Thank you.");
+    }
+    function closeAbout() {
+      $('.about-section').removeClass('active');
+      $('.button-about').removeClass('active');
+      $('.button-about-icon').removeClass('active');
+      $('.about-contents-closed').removeClass('active');
+      $('.about-contents-closed').html('');
+      $('.about-contents-title').html("");
+      $('.about-contents-desc').html("");
+    }
+    $('.button-about-click').click(openAbout);
+    $('.about-contents-closed').click(closeAbout);
+
     var movieInfoGenreItem = [
       "Action, Sci-Fi",
       "Drama, Thriller",
@@ -74,7 +101,7 @@
     var bgColor = [
       "#32614D",
       "#89ACC4",
-      "#6F84DB"
+      "#436495"
     ]
     for (i = 0; i < posterWidth; i++){        
       posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));
@@ -90,13 +117,9 @@
       $("body").css("background-color", bgColor[countIndexNumber]);
 
       if(countIndexNumber == 0){
-          for (i = 0; i < posterWidth; i++){        
-            posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));
-          }
+          for (i = 0; i < posterWidth; i++){ posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));}
       }else{
-          for (i = 0; i < posterWidth; i++) {
-            posterFirst(i, 0,0);
-          }
+          for (i = 0; i < posterWidth; i++) {posterFirst(i,0,0);}
       }
 
       if(countIndexNumber == 1){
