@@ -1,7 +1,5 @@
-
-
 body {
-  font-family: 'GBW';
+  font-family: 'GBW', sans-serif;
   background-color: #32614D;
   transition: background-color .5s ease-in-out;
 
