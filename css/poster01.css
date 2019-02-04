@@ -1,12 +1,12 @@
 .wrapper{
   overflow: hidden;
-  height: 123vw;
+  height: 366px;
   background-color: #2C2F36;
 }
 
 .parent{
   width: 1px;
-  height: 123vw;
+  height: 366px;
   float: left;
   overflow: hidden;
   position: relative;
@@ -18,7 +18,7 @@
 }
 
 .child img{
-  width: 74vw;
+  width: 220px;
   height: auto;
 }
 
