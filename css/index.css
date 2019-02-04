@@ -157,13 +157,13 @@ body {
   bottom: 0;
 }
 .about-contents-closed{
+  background-color: #32614D;
   position: absolute;
   top: 28px;
   right: 7.5vw;
 }
 
 .about-contents-closed.active{
-  background-color: #222;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -217,7 +217,11 @@ body {
 
 @media screen and (min-width: 600px) {
   .poster{
+    width: 420px;
     height: 700px;
+  }
+  .poster-container{
+    width: 420px;
   }
   .title-section{
     bottom: 60px;
