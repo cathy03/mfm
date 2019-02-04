@@ -1,15 +1,7 @@
-@font-face { 
-font-family: 'GBW'; // 사용할 폰트 이름작성
-font-style: normal;
-src:url( /font/Graphik-Black-Web.eot ); // 익스플로러
-src:url( /font/Graphik-Black-Web.eot?#iefix) format('embedded-opentype'), 
-url( /font/Graphik-Black-Web.woff ) format('woff'),  //크롬, 파이어폭스
-url( /font/Graphik-Black-Web.ttf ) format('truetype'); //사파리
-src:local(※), url( /font/Graphik-Black-Web.woff ) format('woff'); 
-}
+
 
 body {
-  font-family: 'GBW', 'Roboto', 'sans-serif';
+  font-family: 'GBW';
   background-color: #32614D;
   transition: background-color .5s ease-in-out;
 
