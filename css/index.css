@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'Graphik-Black';
+  font-family: 'Graphik';
   font-style: normal;
   font-weight: 900;
-  src: local('Graphik'),
+  src: local(※),
        url('/fonts/Graphik-Black.woff') format('woff')
 }
 
 body {
-  font-family: 'Graphik-Black', 'Roboto', 'sans-serif';
+  font-family: 'Graphik', 'Roboto', 'sans-serif';
   background-color: #32614D;
   transition: background-color .5s ease-in-out;
 
