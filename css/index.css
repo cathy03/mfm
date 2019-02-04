@@ -3,7 +3,7 @@
   font-style: normal;
   font-weight: 900;
   src: local(※),
-       url('/fonts/Graphik-Black.woff') format('woff')
+       url('/fonts/gbn.woff') format('woff')
 }
 
 body {
