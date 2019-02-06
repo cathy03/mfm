@@ -37,7 +37,7 @@
         <div class="about-contents">
           <div class="about-contents-closed"></div>
           <h3 class="about-contents-title"></h3>
-          <div class="about-contents-desc"></div>
+          <div class="about-contents-desc desc-text"></div>
         </div>
       </div>
       <div class="deco-circle"></div>
@@ -49,9 +49,26 @@
         <div class="people secondary-text">
           <span>Rupert Wyatt</span><br><span>Andy Serkis</span>
         </div>
-        <a class="button-detail"><img src="images/more.svg"></a>
+        <div class="button-detail-click"></div>
+        <div class="button-detail"><img src="images/more.svg"></div>
         <div class="deco-circle-fill"></div>
       </div>
+    </div>
+    <div class="detail-contents-closed">
+      <div class="deco-circle-fill"></div>
+      <div class="button-detail-closed"><img src="images/closed.svg"></div>
+    </div>
+    <div class="detail-container">
+      <div class="detail-top-section"><div class="detail-poster"></div></div>
+      <div class="detail-contents">
+        <h3 class="detail-contents-title title"><span>RISE OF</span><br><span>THE PLANET OF</span><br><span>THE APES</span></h3>
+        <div class="detail-contents-info">
+          <div class="movie-info-genre desc-text">Action, Sci-Fi</div>
+          <div class="movie-info-release desc-text">2011</div>
+        </div>
+        <div class="detail-contents-desc desc-text"></div>
+      </div>
+      
     </div>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/anime.min.js"></script>
@@ -63,6 +80,8 @@
   <script>
     function openAbout() {
       $('.about-section').addClass('active');
+      $('.about-contents').css('padding-left', '50px');
+      $('.about-contents').css('padding-right', '50px');
       $('.button-about').addClass('active');
       $('.button-about-icon').addClass('active');
       $('.about-contents-closed').addClass('active');
@@ -72,6 +91,8 @@
     }
     function closeAbout() {
       $('.about-section').removeClass('active');
+      $('.about-contents').css('padding-left', '0px');
+      $('.about-contents').css('padding-right', '0px');
       $('.button-about').removeClass('active');
       $('.button-about-icon').removeClass('active');
       $('.about-contents-closed').removeClass('active');
@@ -81,6 +102,58 @@
     }
     $('.button-about-click').click(openAbout);
     $('.about-contents-closed').click(closeAbout);
+
+    function openDetail() {
+      anime({
+        targets: '.main-container',
+        opacity: 0,
+        easing: 'easeInOutQuad',
+        duration: 400,
+      });
+      anime({
+        targets: '.detail-container',
+        translateY: ['600', '0'],
+        opacity: 1,
+        easing: 'easeInOutQuad',
+        duration: 400,
+      });
+      anime({
+        targets: '.detail-contents-closed',
+        opacity: 1,
+        duration: 400
+      })
+      $('.detail-contents-closed').css('z-index', 3000);
+      $('.detail-contents-desc').html("This project started on facebook as a group called 'Listeners Playlist' where my friends shared their favorite music with one another. This inspired me to create an independant website where an archive with all the music that is shared in the group. Hence you are seeing now.<br><br>If you are a musician or have a nice music taste. And if you want to share the music via this website. Contact me. But all requests would not be allowed for the quality of contents.<br><br>Thank you.");
+    }
+    function closeDetail() {
+      anime({
+        targets: '.main-container',
+        opacity: 1,
+        easing: 'easeInOutQuad',
+        duration: 350,
+      });
+      anime({
+        targets: '.detail-container',
+        translateY: ['0', '600'],
+        opacity: 0,
+        easing: 'easeInOutQuad',
+        duration: 350,
+        complete: function(anim) {
+          $('.detail-container').css('transform', "");      
+        }
+      });
+      anime({
+        targets: '.detail-contents-closed',
+        opacity: 0,
+        duration: 350
+      })
+      $('.detail-contents-closed').css('z-index', -1000);
+      $('.detail-contents-desc').html("");
+    }
+    
+    $('.button-detail-click').click(openDetail);
+    $('.button-detail-closed').click(closeDetail);
+
 
     var movieInfoGenreItem = [
       "Action, Sci-Fi",
@@ -124,6 +197,7 @@
       $('.people').html(moviePeople[countIndexNumber]);
       $("body").css("background-color", bgColor[countIndexNumber]);
       $('.about-contents-closed').css("background-color", bgColor[countIndexNumber]);
+      $('.detail-top-section').css("background-color", bgColor[countIndexNumber]);
 
       if(countIndexNumber == 0){
           for (i = 0; i < posterWidth; i++){ posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));}

@@ -48,7 +48,7 @@ body {
   margin-bottom: 10px;
 }
 
-.title{
+h2{
   font-weight: 900;
   font-size: 62px;
   color: #FFFFFF;
@@ -149,10 +149,8 @@ body {
 
 .about-contents{
   padding-top: 30vh;
-  padding-left: 50px;
-  padding-right: 50px;
   position: absolute;
-  z-index: 4000;
+  z-index: 3000;
   top: 0;
   bottom: 0;
 }
@@ -168,8 +166,11 @@ body {
   height: 36px;
   border-radius: 50%;
 }
+.about-contents-closed img{
+  margin: 1px;
+}
 
-.about-contents-title{
+h3{
   font-weight: 900;
   font-size: 32px;
   color: #222222;
@@ -178,7 +179,10 @@ body {
 }
 
 .about-contents-desc{
-  margin-top: 50px;
+  margin-top: 50px;  
+}
+
+.desc-text{
   font-weight: 900;
   font-size: 15px;
   color: #222222;
@@ -207,6 +211,14 @@ body {
   text-align: center;
 }
 
+.button-detail-click{
+  position: absolute;
+  bottom: 46px;
+  width: 36px;
+  height: 36px;  
+  z-index: 2500;
+}
+
 .deco-circle-fill {
   width: 36px;
   height: 36px;
@@ -214,6 +226,65 @@ body {
   background-color: #fff;
   margin-top: 10px;
 }
+
+
+.detail-contents-closed{
+  position: absolute;
+  top: -18px;
+  right: 7.5vw;
+  opacity: 0;
+}
+
+.detail-contents-closed .deco-circle-fill{
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.button-detail-closed{
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.detail-container{
+  opacity: 0;
+  background-color: white;
+}
+
+.detail-top-section{
+  height: 25vh;
+  background-color: #32614D;
+}
+
+.detail-poster{
+  transform: translateY(12.5vh);
+  margin: 0 auto;
+  width: 110px;
+  height: 183px;
+  border-radius: 3px;
+  background: #22242A;
+  box-shadow: 0 5px 20px 0 rgba(0,0,0,0.20);
+}
+
+.detail-contents{
+  padding: 0 50px 50px 50px;
+}
+
+.detail-contents-title{
+  padding-top: 133px;
+}
+
+.detail-contents-info{
+  padding-top: 20px;
+}
+
+.detail-contents-desc{
+  padding-top: 20px;
+}
+
 
 @media screen and (min-width: 600px) {
   .poster{
