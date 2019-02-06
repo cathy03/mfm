@@ -148,11 +148,9 @@ h2{
 }
 
 .about-contents{
-  padding-top: 30vh;
+  padding-top: 25vh;
   position: absolute;
   z-index: 3000;
-  top: 0;
-  bottom: 0;
 }
 .about-contents-closed{
   background-color: #32614D;
