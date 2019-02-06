@@ -259,12 +259,19 @@ h3{
 
 .detail-poster{
   transform: translateY(12.5vh);
+  overflow: hidden;
   margin: 0 auto;
   width: 110px;
   height: 183px;
   border-radius: 3px;
   background: #22242A;
   box-shadow: 0 5px 20px 0 rgba(0,0,0,0.20);
+}
+
+.detail-poster img{
+  height: 100%; 
+  width: 100%; 
+  object-fit: contain;
 }
 
 .detail-contents{

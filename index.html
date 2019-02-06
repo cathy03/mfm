@@ -59,7 +59,7 @@
       <div class="button-detail-closed"><img src="images/closed.svg"></div>
     </div>
     <div class="detail-container">
-      <div class="detail-top-section"><div class="detail-poster"></div></div>
+      <div class="detail-top-section"><div class="detail-poster"><img src='images/poster01.png'></div></div>
       <div class="detail-contents">
         <h3 class="detail-contents-title title"><span>RISE OF</span><br><span>THE PLANET OF</span><br><span>THE APES</span></h3>
         <div class="detail-contents-info">
@@ -184,6 +184,13 @@
       "#89ACC4",
       "#436495"
     ]
+
+    var moviePoster = [
+      "<img src='images/poster01.png'>",
+      "<img src='images/poster02.png'>",
+      "<img src='images/poster03.png'>"
+    ]
+
     for (i = 0; i < posterWidth; i++){        
       posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));
     }
@@ -198,6 +205,7 @@
       $("body").css("background-color", bgColor[countIndexNumber]);
       $('.about-contents-closed').css("background-color", bgColor[countIndexNumber]);
       $('.detail-top-section').css("background-color", bgColor[countIndexNumber]);
+      $('.detail-poster').html(moviePoster[countIndexNumber]);
 
       if(countIndexNumber == 0){
           for (i = 0; i < posterWidth; i++){ posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));}
