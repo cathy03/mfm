@@ -135,13 +135,13 @@ h2{
   height: 36px;
   border-radius: 50%;
   text-align: center;
-  transform: scale(1);
+  transform: scale3d(1,1,1);
   transition: all 0.35s ease-out;
 }
 
 .button-about.active::before{
   content: "";
-  transform: scale(50);
+  transform: scale3d(50,50,1);
   background-color: white;
 }
 
