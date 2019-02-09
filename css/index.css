@@ -53,14 +53,13 @@ h2{
   font-size: 62px;
   color: #FFFFFF;
   letter-spacing: -2px;
-  line-height: 56px;  
+  line-height: 56px; 
 }
 
 .title span{
   float: left;
   text-transform: uppercase;
   width: 100%;
-  transform: translateY(0);
   animation-name: titleAnimation;
   animation-timing-function:ease;
   animation-duration: .4s;
@@ -91,7 +90,6 @@ h2{
 
 .people span{
   float: left;
-  transform: translateY(0);
   animation-name: infoAnimation;
   animation-timing-function: ease;
   animation-duration: .4s;
@@ -204,7 +202,8 @@ h3{
   width: 36px;
   height: 36px;
   border-radius: 100%;
-  border: 1px solid rgba(255,255,255,0.60);  display: block;
+  border: 1px solid rgba(255,255,255,0.60);  
+  display: block;
   box-sizing: border-box;
   text-align: center;
 }
@@ -315,22 +314,22 @@ h3{
 
 @keyframes titleAnimation {
   0% {
-    transform: translateY(-50px);
+    transform: translate3d(0, -50px, 0);
     opacity: 0;     
   }
   100% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;     
   }
 }
 
 @keyframes infoAnimation {
   0% {
-    transform: translateY(-30px);
+    transform: translate3d(0, -30px, 0);;
     opacity: 0;     
   }
   100% {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);;
     opacity: 1;     
   }
 }
