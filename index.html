@@ -68,7 +68,6 @@
         </div>
         <div class="detail-contents-desc desc-text"></div>
       </div>
-      
     </div>
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/anime.min.js"></script>
@@ -89,6 +88,7 @@
       $('.about-contents-closed').html('<img src="images/closed.svg">');
       $('.about-contents-desc').html("This project started on facebook as a group called 'Listeners Playlist' where my friends shared their favorite music with one another. This inspired me to create an independant website where an archive with all the music that is shared in the group. Hence you are seeing now.<br><br>If you are a musician or have a nice music taste. And if you want to share the music via this website. Contact me. But all requests would not be allowed for the quality of contents.<br><br>Thank you.");
     }
+
     function closeAbout() {
       $('.about-section').removeClass('active');
       $('.about-contents').css('padding-left', '0px');
@@ -103,7 +103,36 @@
     $('.button-about-click').click(openAbout);
     $('.about-contents-closed').click(closeAbout);
 
+    var data;
+
+    function closeDetail() {
+      anime({
+        targets: '.main-container',
+        opacity: 1,
+        easing: 'easeInOutQuad',
+        duration: 350,
+      });
+      anime({
+        targets: '.detail-container',
+        translateY: ['0', '600'],
+        opacity: 0,
+        easing: 'easeInOutQuad',
+        duration: 350,
+        complete: function(anim) {
+          $('.detail-container').css('transform', "");
+          data = $(".detail-container").detach();      
+        }
+      });
+      anime({
+        targets: '.detail-contents-closed',
+        opacity: 0,
+        duration: 350
+      })
+      $('.detail-contents-closed').css('z-index', -1000);
+    }
+
     function openDetail() {
+      $('.main-container').after(data);
       anime({
         targets: '.main-container',
         opacity: 0,
@@ -125,31 +154,7 @@
       $('.detail-contents-closed').css('z-index', 3000);
       $('.detail-contents-desc').html("This project started on facebook as a group called 'Listeners Playlist' where my friends shared their favorite music with one another. This inspired me to create an independant website where an archive with all the music that is shared in the group. Hence you are seeing now.<br><br>If you are a musician or have a nice music taste. And if you want to share the music via this website. Contact me. But all requests would not be allowed for the quality of contents.<br><br>Thank you.");
     }
-    function closeDetail() {
-      anime({
-        targets: '.main-container',
-        opacity: 1,
-        easing: 'easeInOutQuad',
-        duration: 350,
-      });
-      anime({
-        targets: '.detail-container',
-        translateY: ['0', '600'],
-        opacity: 0,
-        easing: 'easeInOutQuad',
-        duration: 350,
-        complete: function(anim) {
-          $('.detail-container').css('transform', "");      
-        }
-      });
-      anime({
-        targets: '.detail-contents-closed',
-        opacity: 0,
-        duration: 350
-      })
-      $('.detail-contents-closed').css('z-index', -1000);
-      $('.detail-contents-desc').html("");
-    }
+    
     
     $('.button-detail-click').click(openDetail);
     $('.button-detail-closed').click(closeDetail);
