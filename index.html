@@ -25,22 +25,27 @@
     <link rel="stylesheet" href="css/poster01.css">
   </head>
   <body>
+    <div class="about-section">
+      <div class="about-contents-closed"></div>
+       <div class="about-contents">
+        <h3 class="about-contents-title">MY<br>FAVORITE<br>FILMS</h3>
+        <div class="about-contents-desc desc-text">This project started on facebook as a group called 'Listeners Playlist' where my friends shared their favorite music with one another. This inspired me to create an independant website where an archive with all the music that is shared in the group. Hence you are seeing now.<br><br>If you are a musician or have a nice music taste. And if you want to share the music via this website. Contact me. But all requests would not be allowed for the quality of contents.<br><br>Thank you.</div>
+      </div>
+    </div>  
+    <div class="button-about-container">
+      <div class="button-about"></div>
+    </div>
+
     <div class="main-container">
+      <div class="button-about-click"><img src="images/logo.svg"></div>
+      <div class="deco-circle"></div>
+
       <div id="swiper-container">
         <div id="item1" class="swiper-slide"><div class="poster-container"><div class="poster"><ol class="wrapper"></ol></div></div></div>
         <div id="item2" class="swiper-slide"><div class="poster-container"><div id="poster-second" class="poster"></div></div></div>
         <div id="item3" class="swiper-slide"><div class="poster-container"><div class="poster">Slide</div></div></div>
       </div>
-      <div class="about-section">
-        <div class="button-about-click"><img src="images/logo.svg"></div>
-        <div class="button-about"></div>
-        <div class="about-contents">
-          <div class="about-contents-closed"></div>
-          <h3 class="about-contents-title"></h3>
-          <div class="about-contents-desc desc-text"></div>
-        </div>
-      </div>
-      <div class="deco-circle"></div>
+      
       <div class="title-section">
         <div class="movie-info-release secondary-text">2011</div>
         <h2 class="title"><span>RISE OF</span><br><span>THE PLANET OF</span><br><span>THE APES</span></h2>
@@ -54,17 +59,18 @@
         <div class="deco-circle-fill"></div>
       </div>
     </div>
+
     <div class="detail-contents-closed">
       <div class="deco-circle-fill"></div>
       <div class="button-detail-closed"><img src="images/closed.svg"></div>
     </div>
     <div class="detail-container">
-      <div class="detail-top-section"><div class="detail-poster"><img src='images/poster01.png'></div></div>
+      <div class="detail-top-section"><div class="detail-poster"></div></div>
       <div class="detail-contents">
-        <h3 class="detail-contents-title title"><span>RISE OF</span><br><span>THE PLANET OF</span><br><span>THE APES</span></h3>
+        <h3 class="detail-contents-title title"></h3>
         <div class="detail-contents-info">
-          <div class="movie-info-genre desc-text">Action, Sci-Fi</div>
-          <div class="movie-info-release desc-text">2011</div>
+          <div class="movie-info-genre desc-text"></div>
+          <div class="movie-info-release desc-text"></div>
         </div>
         <div class="detail-contents-desc desc-text"></div>
       </div>
@@ -77,88 +83,7 @@
   <script src="js/posterfirst.js"></script>  
 
   <script>
-    function openAbout() {
-      $('.about-section').addClass('active');
-      $('.about-contents').css('padding-left', '50px');
-      $('.about-contents').css('padding-right', '50px');
-      $('.button-about').addClass('active');
-      $('.button-about-icon').addClass('active');
-      $('.about-contents-closed').addClass('active');
-      $('.about-contents-title').html("MY<br>FAVORITE<br>FILMS");
-      $('.about-contents-closed').html('<img src="images/closed.svg">');
-      $('.about-contents-desc').html("This project started on facebook as a group called 'Listeners Playlist' where my friends shared their favorite music with one another. This inspired me to create an independant website where an archive with all the music that is shared in the group. Hence you are seeing now.<br><br>If you are a musician or have a nice music taste. And if you want to share the music via this website. Contact me. But all requests would not be allowed for the quality of contents.<br><br>Thank you.");
-    }
-
-    function closeAbout() {
-      $('.about-section').removeClass('active');
-      $('.about-contents').css('padding-left', '0px');
-      $('.about-contents').css('padding-right', '0px');
-      $('.button-about').removeClass('active');
-      $('.button-about-icon').removeClass('active');
-      $('.about-contents-closed').removeClass('active');
-      $('.about-contents-closed').html('');
-      $('.about-contents-title').html("");
-      $('.about-contents-desc').html("");
-    }
-    $('.button-about-click').click(openAbout);
-    $('.about-contents-closed').click(closeAbout);
-
-    var data;
-
-    function closeDetail() {
-      anime({
-        targets: '.main-container',
-        opacity: 1,
-        easing: 'easeInOutQuad',
-        duration: 350,
-      });
-      anime({
-        targets: '.detail-container',
-        translateY: ['0', '600'],
-        opacity: 0,
-        easing: 'easeInOutQuad',
-        duration: 350,
-        complete: function(anim) {
-          $('.detail-container').css('transform', "");
-          data = $(".detail-container").detach();      
-        }
-      });
-      anime({
-        targets: '.detail-contents-closed',
-        opacity: 0,
-        duration: 350
-      })
-      $('.detail-contents-closed').css('z-index', -1000);
-    }
-
-    function openDetail() {
-      $('.main-container').after(data);
-      anime({
-        targets: '.main-container',
-        opacity: 0,
-        easing: 'easeInOutQuad',
-        duration: 400,
-      });
-      anime({
-        targets: '.detail-container',
-        translateY: ['600', '0'],
-        opacity: 1,
-        easing: 'easeInOutQuad',
-        duration: 400,
-      });
-      anime({
-        targets: '.detail-contents-closed',
-        opacity: 1,
-        duration: 400
-      })
-      $('.detail-contents-closed').css('z-index', 3000);
-      $('.detail-contents-desc').html("This project started on facebook as a group called 'Listeners Playlist' where my friends shared their favorite music with one another. This inspired me to create an independant website where an archive with all the music that is shared in the group. Hence you are seeing now.<br><br>If you are a musician or have a nice music taste. And if you want to share the music via this website. Contact me. But all requests would not be allowed for the quality of contents.<br><br>Thank you.");
-    }
-    
-    
-    $('.button-detail-click').click(openDetail);
-    $('.button-detail-closed').click(closeDetail);
-
+    var countIndexNumber = 0
 
     var movieInfoGenreItem = [
       "Action, Sci-Fi",
@@ -196,6 +121,15 @@
       "<img src='images/poster03.png'>"
     ]
 
+/* flicking interaction */
+    var flickPoster = new eg.Flicking("#swiper-container", {
+      duration: 300,
+      circular: true,
+      defaultIndex: 0      
+    }).on({
+      flickEnd : countIndex
+    });
+
     for (i = 0; i < posterWidth; i++){        
       posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));
     }
@@ -208,10 +142,7 @@
       $('.title').html(movieTitle[countIndexNumber]);
       $('.people').html(moviePeople[countIndexNumber]);
       $("body").css("background-color", bgColor[countIndexNumber]);
-      $('.about-contents-closed').css("background-color", bgColor[countIndexNumber]);
-      $('.detail-top-section').css("background-color", bgColor[countIndexNumber]);
-      $('.detail-poster').html(moviePoster[countIndexNumber]);
-
+      
       if(countIndexNumber == 0){
           for (i = 0; i < posterWidth; i++){ posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));}
       }else{
@@ -225,13 +156,125 @@
       }
     }
 
-    new eg.Flicking("#swiper-container", {
-      duration: 300,
-      circular: true,
-      defaultIndex: 0      
-    }).on({
-      flickEnd : countIndex
-    });    
+/* about interaction */
+    aboutData = $(".about-section").detach();      
+
+    function openAbout() {
+      $('.button-about').addClass('active');
+      $('.button-about-container').before(aboutData);
+      $('.about-contents-closed').html('<img src="images/closed.svg">');      
+      $('.about-contents-closed').css("background-color", bgColor[countIndexNumber]);
+      anime({
+        targets: '.main-container',
+        opacity: 0,
+        easing: 'easeInOutQuad',
+        duration: 400,
+      });
+
+      anime({
+        targets: '.about-contents',
+        delay: 300,
+        opacity: 1,
+        easing: 'easeInOutQuad',
+        duration: 350,
+      });
+      $('.about-section').css('z-index', '2500');      
+    }
+
+    function closeAbout() {
+      $('.button-about').removeClass('active');
+      anime({
+        targets: '.main-container',
+        opacity: 1,
+        easing: 'easeInOutQuad',
+        duration: 350,
+      });
+
+      anime({
+        targets: '.about-contents',
+        opacity: 0,
+        easing: 'easeInOutQuad',
+        duration: 350,
+        complete: function(anim) {
+          $(".about-section").detach();
+        }
+      });
+      $('.about-section').css('z-index', '0')
+    }
+
+    $('.button-about-click').click(openAbout);
+    $('.about-contents-closed').click(closeAbout);
+
+/* detail interaction */
+    detailData = $(".detail-container").detach();
+
+    function openDetail() {
+
+      posterSecond.stop();
+
+      $('.main-container').after(detailData);
+      anime({
+        targets: '.main-container',
+        opacity: 0,
+        easing: 'easeInOutQuad',
+        duration: 400,
+      });
+      anime({
+        targets: '.detail-container',
+        translateY: ['600', '0'],
+        opacity: 1,
+        easing: 'easeInOutQuad',
+        duration: 400,
+      });
+      anime({
+        targets: '.detail-contents-closed',
+        opacity: 1,
+        duration: 400
+      })
+      $('.detail-contents-closed').css('z-index', 3000);
+      $('.detail-contents-desc').html("This project started on facebook as a group called 'Listeners Playlist' where my friends shared their favorite music with one another. This inspired me to create an independant website where an archive with all the music that is shared in the group. Hence you are seeing now.<br><br>If you are a musician or have a nice music taste. And if you want to share the music via this website. Contact me. But all requests would not be allowed for the quality of contents.<br><br>Thank you.");
+      $('.detail-top-section').css("background-color", bgColor[countIndexNumber]);
+      $('.detail-poster').html(moviePoster[countIndexNumber]);
+      $('.detail-contents .movie-info-genre').text(movieInfoGenreItem[countIndexNumber]);
+      $('.detail-contents .movie-info-release').text(movieInfoRelease[countIndexNumber]);
+      $('.detail-contents .title').html(movieTitle[countIndexNumber]);
+    }
+
+    function closeDetail() {
+
+      posterSecond.play();
+
+      anime({
+        targets: '.main-container',
+        opacity: 1,
+        easing: 'easeInOutQuad',
+        duration: 350,
+      });
+      anime({
+        targets: '.detail-container',
+        translateY: ['0', '600'],
+        opacity: 0,
+        easing: 'easeInOutQuad',
+        duration: 350,
+        complete: function(anim) {
+          $('.detail-container').css('transform', "");
+          $(".detail-container").detach();      
+        }
+      });
+      anime({
+        targets: '.detail-contents-closed',
+        opacity: 0,
+        duration: 350
+      })
+      $('.detail-contents-closed').css('z-index', -1000);
+    }
+    
+    $('.button-detail-click').click(openDetail);
+    $('.button-detail-closed').click(closeDetail);
+
+
+    
+    
   </script>
   </body>
 </html>
