@@ -25,8 +25,8 @@
     <link rel="stylesheet" href="css/poster01.css">
   </head>
   <body>
+    <div class="about-contents-closed"></div>
     <div class="about-section">
-      <div class="about-contents-closed"></div>
        <div class="about-contents">
         <h3 class="about-contents-title">MY<br>FAVORITE<br>FILMS</h3>
         <div class="about-contents-desc desc-text">This project started on facebook as a group called 'Listeners Playlist' where my friends shared their favorite music with one another. This inspired me to create an independant website where an archive with all the music that is shared in the group. Hence you are seeing now.<br><br>If you are a musician or have a nice music taste. And if you want to share the music via this website. Contact me. But all requests would not be allowed for the quality of contents.<br><br>Thank you.</div>
@@ -157,10 +157,11 @@
     }
 
 /* about interaction */
-    aboutData = $(".about-section").detach();      
+    aboutData = $('.about-section').detach();
+    aboutin = $('.button-about-container').detach();
 
     function openAbout() {
-      $('.button-about').addClass('active');
+      $('.main-container').before(aboutin);
       $('.button-about-container').before(aboutData);
       $('.about-contents-closed').html('<img src="images/closed.svg">');      
       $('.about-contents-closed').css("background-color", bgColor[countIndexNumber]);
@@ -170,35 +171,64 @@
         easing: 'easeInOutQuad',
         duration: 400,
       });
+      anime({
+        targets: '.button-about',
+        scale: 50,
+        easing: 'easeInOutQuad',
+        duration: 400,
+      });
 
       anime({
         targets: '.about-contents',
         delay: 300,
+        translateY: ['200', '0'],
         opacity: 1,
         easing: 'easeInOutQuad',
         duration: 350,
       });
+      anime({
+        targets: '.about-contents-closed',
+        opacity: 1,
+        easing: 'easeInOutQuad',
+        duration: 350,
+      });
+      $('.about-contents-closed').css('z-index', '2600');      
       $('.about-section').css('z-index', '2500');      
     }
 
     function closeAbout() {
-      $('.button-about').removeClass('active');
       anime({
         targets: '.main-container',
         opacity: 1,
         easing: 'easeInOutQuad',
         duration: 350,
       });
+      anime({
+        targets: '.button-about',
+        scale: 1,
+        easing: 'easeInOutQuad',
+        duration: 350,
+        complete: function(anim) {
+          $('.button-about-container').detach();
+        }
+      });
 
       anime({
         targets: '.about-contents',
         opacity: 0,
         easing: 'easeInOutQuad',
-        duration: 350,
+        duration: 200,
         complete: function(anim) {
           $(".about-section").detach();
         }
       });
+      anime({
+        targets: '.about-contents-closed',
+        opacity: 0,
+        easing: 'easeInOutQuad',
+        duration: 200,
+      });
+      $('.about-contents-closed').css('z-index', '0');
       $('.about-section').css('z-index', '0')
     }
 
@@ -231,7 +261,6 @@
         opacity: 1,
         duration: 400
       })
-      $('.detail-contents-closed').css('z-index', 3000);
       $('.detail-contents-desc').html("This project started on facebook as a group called 'Listeners Playlist' where my friends shared their favorite music with one another. This inspired me to create an independant website where an archive with all the music that is shared in the group. Hence you are seeing now.<br><br>If you are a musician or have a nice music taste. And if you want to share the music via this website. Contact me. But all requests would not be allowed for the quality of contents.<br><br>Thank you.");
       $('.detail-top-section').css("background-color", bgColor[countIndexNumber]);
       $('.detail-poster').html(moviePoster[countIndexNumber]);
@@ -266,7 +295,6 @@
         opacity: 0,
         duration: 350
       })
-      $('.detail-contents-closed').css('z-index', -1000);
     }
     
     $('.button-detail-click').click(openDetail);

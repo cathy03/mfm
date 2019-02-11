@@ -131,13 +131,6 @@ h2{
   height: 36px;
   border-radius: 50%;
   text-align: center;
-  transform: scale(1);
-  transition: all 0.35s ease-out;
-
-}
-
-.button-about.active{
-  transform: scale3d(50,50,1);
   background-color: white;
 }
 
@@ -160,8 +153,10 @@ h2{
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  z-index: 4000;
+  z-index: 0;
+  opacity: 0;
 }
+
 .about-contents-closed img{
   margin: 1px;
 }
