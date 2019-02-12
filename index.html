@@ -152,12 +152,12 @@
       } else{        
         posterSecond.stop();
       }
-    }
+    }  
 
     for (i = 0; i < posterWidth; i++){        
       posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));
     }
-    
+
 /* about interaction */
     aboutData = $('.about-section').detach();
     aboutin = $('.button-about-container').detach();
@@ -195,7 +195,14 @@
         duration: 350,
       });
       $('.about-contents-closed').css('z-index', '2600');      
-      $('.about-section').css('z-index', '2500');      
+      $('.about-section').css('z-index', '2500');
+
+      if(countIndexNumber == 0){
+        for (i = 0; i < posterWidth; i++) {posterFirst(i,0,0);}
+      }
+      if(countIndexNumber == 1){
+        posterSecond.stop();
+      }     
     }
 
     function closeAbout() {
@@ -231,7 +238,15 @@
         duration: 200,
       });
       $('.about-contents-closed').css('z-index', '0');
-      $('.about-section').css('z-index', '0')
+      $('.about-section').css('z-index', '0');
+
+      if(countIndexNumber == 0){
+          for (i = 0; i < posterWidth; i++){ posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));}
+      }
+
+      if(countIndexNumber == 1){
+        posterSecond.play();
+      } 
     }
 
     $('.button-about-click').click(openAbout);
@@ -267,6 +282,13 @@
       $('.detail-contents .movie-info-genre').text(movieInfoGenreItem[countIndexNumber]);
       $('.detail-contents .movie-info-release').text(movieInfoRelease[countIndexNumber]);
       $('.detail-contents .title').html(movieTitle[countIndexNumber]);
+
+      if(countIndexNumber == 0){
+        for (i = 0; i < posterWidth; i++) {posterFirst(i,0,0);}
+      }
+      if(countIndexNumber == 1){
+        posterSecond.stop();
+      }     
     }
 
     function closeDetail() {
@@ -292,7 +314,15 @@
         targets: '.detail-contents-closed',
         opacity: 0,
         duration: 350
-      })
+      });
+
+      if(countIndexNumber == 0){
+          for (i = 0; i < posterWidth; i++){ posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));}
+      }
+
+      if(countIndexNumber == 1){
+        posterSecond.play();
+      } 
     }
     
     $('.button-detail-click').click(openDetail);
