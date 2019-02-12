@@ -178,6 +178,9 @@
         scale: 50,
         easing: 'easeInOutQuad',
         duration: 400,
+        complete: function(anim) {
+          $("body").css("background-color", 'white');
+        }
       });
 
       anime({
@@ -206,6 +209,7 @@
     }
 
     function closeAbout() {
+      $("body").css("background-color", bgColor[countIndexNumber]);
       anime({
         targets: '.main-container',
         opacity: 1,
