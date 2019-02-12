@@ -130,9 +130,7 @@
       flickEnd : countIndex
     });
 
-    for (i = 0; i < posterWidth; i++){        
-      posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));
-    }
+
 
     function countIndex(e) { 
 
@@ -156,6 +154,10 @@
       }
     }
 
+    for (i = 0; i < posterWidth; i++){        
+      posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));
+    }
+    
 /* about interaction */
     aboutData = $('.about-section').detach();
     aboutin = $('.button-about-container').detach();
@@ -240,8 +242,6 @@
 
     function openDetail() {
 
-      posterSecond.stop();
-
       $('.main-container').after(detailData);
       anime({
         targets: '.main-container',
@@ -270,8 +270,6 @@
     }
 
     function closeDetail() {
-
-      posterSecond.play();
 
       anime({
         targets: '.main-container',
