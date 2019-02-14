@@ -43,7 +43,7 @@
       <div id="swiper-container">
         <div id="item1" class="swiper-slide"><div class="poster-container"><div class="poster"><ol class="wrapper"></ol></div></div></div>
         <div id="item2" class="swiper-slide"><div class="poster-container"><div id="poster-second" class="poster"></div></div></div>
-        <div id="item3" class="swiper-slide"><div class="poster-container"><div class="poster">Slide</div></div></div>
+        <div id="item3" class="swiper-slide"><div class="poster-container"><div id="poster-third" class="poster"></div></div></div>
       </div>
       
       <div class="title-section">
@@ -79,8 +79,9 @@
   <script src="js/anime.min.js"></script>
   <script src="js/flicking.pkgd.min.js"></script>
   <script src="js/lottie.js" type="text/javascript"></script>
-  <script src="js/postersecond.js"></script>
   <script src="js/posterfirst.js"></script>  
+  <script src="js/postersecond.js"></script>
+  <script src="js/posterthird.js"></script>  
 
   <script>
     var countIndexNumber = 0
@@ -151,8 +152,9 @@
         posterSecond.play();
       } else{        
         posterSecond.stop();
-      }
+      }    
     }  
+   
 
     for (i = 0; i < posterWidth; i++){        
       posterFirst(i, anime.random(-480, 480), anime.random(1000, 5000));
@@ -210,6 +212,7 @@
 
     function closeAbout() {
       $("body").css("background-color", bgColor[countIndexNumber]);
+
       anime({
         targets: '.main-container',
         opacity: 1,
